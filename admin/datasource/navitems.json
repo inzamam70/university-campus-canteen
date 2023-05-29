@@ -1,0 +1,113 @@
+[
+    {
+        "name":"Dashboard",
+        "url":"app_dashboard.php",
+        "icon":"icon-home4"
+    },
+
+    {
+        "name": "Pos",
+        "url": "add_product.php",
+        "icon": "icon-printer4"
+    },
+    {
+        "name": "Customers",
+        "icon": "icon-users",
+        "subnav":[
+            {
+                "name":"Add Customer",
+                "url":"add_customer.php"
+            },
+            {
+                "name":"Customers",
+                "url":"customer.php"
+            }
+        ]
+    },
+    {
+        "name": "Categories",
+        "icon": "icon-list2",
+        "subnav":[
+            {
+                "name":"Add Category",
+                "url":"add_category.php"
+            },
+            {
+                "name":"Category",
+                "url":"category.php"
+            }
+        ]
+    },
+    {
+        "name": "Products",
+        "icon": "icon-grid2",
+        "subnav":[
+            {
+                "name":"Add Product",
+                "url":"add_product.php"
+            },
+            {
+                "name":"Product",
+                "url":"product.php"
+            }
+        ]
+    },
+    {
+        "name": "Outdoor Place",
+        "icon": "icon-exit3",
+        "subnav":[
+            {
+                "name":"Add Outdoor Place",
+                "url":"add_outdoor.php"
+            },
+            {
+                "name":"Outdoor Places",
+                "url":"outdoor.php"
+            }
+        ]
+    },
+    {
+        "name": "Others",
+        "icon": "icon-compose",
+        "subnav":[
+            {
+                "name":"Add Others",
+                "url":"add_others.php"
+            },
+            {
+                "name":"Other",
+                "url":"other.php"
+            }
+        ]
+    },
+    {
+        "name": "Settings",
+        "icon": "icon-cogs",
+        "subnav":[
+            {
+                "name":"Add User",
+                "url":"add_user.php"
+            },
+            {
+                "name":"User",
+                "url":"user.php"
+            }
+        ]
+    },
+    {
+        "name": "App Configuration",
+        "icon": "icon-android",
+        "subnav":[
+            {
+                "name": "Create a Slide",
+                "url": "slider_create.php",
+                "icon": "icon-menu2"
+            },
+            {
+                "name": "Slides",
+                "url": "slider_index.php",
+                "icon": "icon-pen-plus"
+            }
+        ]
+    }
+]

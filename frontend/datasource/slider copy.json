@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "uuid":"asdf",
+        "src": "/frontend/global_assets/img/slider1.jpg",
+        "alt":"Slider 1 alter",
+        "tittle": "Best Quality ",
+        "caption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+    },
+    {
+        "id" : 2,
+        "uuid":"asdfs",
+        "src": "/frontend/global_assets/img/slider2.jpg",
+        "alt":"Slider 2 alter",
+        "tittle": "Well Service",
+        "caption": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+    },
+    {
+        "id" : 3,
+        "uuid":"dfgdfg",
+        "src":"/frontend/global_assets/img/silder3.jpg",
+        "alt":"Slider 3 alter",
+        "tittle":"All time service",
+        "caption":"Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+    }
+
+]

@@ -1,0 +1,39 @@
+[
+    {
+        "src":"../global_assets/img/product1.jpg",
+        "title":"Chaomin",
+        "caption":"10$",
+        "url":"productdetails.php"
+    },
+    {
+        "src":"../global_assets/img/product2.jpg",
+        "title":"Strabary",
+        "caption":"20$",
+        "url":"productdetails.php"
+    },
+    {
+        "src":"../global_assets/img/product3.jpg",
+        "title":"Donat",
+        "caption":"15$",
+        "url":"productdetails.php"
+    },
+    {
+        "src":"../global_assets/img/product4.jpg",
+        "title":"Naetchos",
+        "caption":"15$",
+        "url":"productdetails.php"
+    },
+    {
+        "src":"../global_assets/img/product5.jpg",
+        "title":"Rice",
+        "caption":"15$",
+        "url":"productdetails.php"
+    },
+    {
+        "src":"../global_assets/img/product6.jpg",
+        "title":"Salad",
+        "caption":"15$",
+        "url":"productdetails.php"
+    }
+
+]

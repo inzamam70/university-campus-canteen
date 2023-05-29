@@ -1,0 +1,83 @@
+* {
+    font-family: montserrat;
+}
+.navbar-nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-brand {
+    color: black;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+    color: rgb(10, 10, 10);
+}
+
+.navbar-light .navbar-nav .navbar-link {
+    color: rgb(5, 5, 5);
+}
+.new {
+    background: green;
+    width: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+.search-container{
+    width: fit-content;
+    position: relative;
+    box-sizing: border-box;
+    
+}
+.search-input{
+    width: 100%;
+    height: 36px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 4px 6px;
+}
+.search-input:focus{
+    outline: none;
+}
+.search-icon{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    color: gray;
+}
+
+
+.col-md-7 h2 {
+    color: #f30505;
+}
+
+.price {
+    color: #FE980F;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+input {
+    border: 1px solid #ccc;
+    font-weight: bold;
+    height: 33px;
+    text-align: center;
+    width: 30px;
+}
+
+.cart {
+    background: #FE980F;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left: 20px;
+    
+}

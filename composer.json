@@ -1,0 +1,17 @@
+{
+
+    "name": "campus/canteen",
+    "type": "project",
+    "description": "",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BITM\\CUMPUS\\":"src/"
+        }
+    },
+    "require": {
+        "mpdf/mpdf": "^8.1",
+        "phpoffice/phpspreadsheet": "^1.28",
+        "intervention/image": "^2.7"
+    }
+ }
