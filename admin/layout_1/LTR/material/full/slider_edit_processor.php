@@ -106,7 +106,9 @@ $id = Utility::sanitize($_POST['id']);
 $slider = new Slider();
 $slide = $slider->find($id);
 
+
 $aslide->alt = Utility::sanitize($_POST['alt']);
+
 $aslide->title = Utility::sanitize($_POST['title']);
 $aslide->caption = Utility::sanitize($_POST['caption']);
 $aslide->src = $src;

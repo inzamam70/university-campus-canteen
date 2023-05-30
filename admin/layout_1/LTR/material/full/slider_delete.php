@@ -38,7 +38,7 @@ if(!Validator::empty($id)){
     d("Id cannot be null or empty");
 }
 
- if($result){ // edge case is not handled. if it writes nothing. length = 0
+ if($result = null){ // edge case is not handled. if it writes nothing. length = 0
      redirect('slider_index.php');		
  }
  ?>

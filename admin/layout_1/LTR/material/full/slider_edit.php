@@ -21,19 +21,23 @@ use \BITM\CUMPUS\Slider;
 use \BITM\CUMPUS\Utility\Validator;
 use \BITM\CUMPUS\Utility\Utility;
  
+
+
 $id = Utility::sanitize($_GET['id']);
 
+   
 if(!Validator::empty($id)){
 	$slider = new Slider();
+	$slideritems = $slider->index();
 	$slide = $slider->edit($id);
 	
 }else{ // REfactor using Session based message
 	d("Id cannot be null or empty");
-
 }
+
     
     
-    //  d($slide);
+//  dd (gettype($slide));
  
 ?>
 

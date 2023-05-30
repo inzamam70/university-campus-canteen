@@ -64,14 +64,6 @@
         "caption": "Quaerat sed cupidata"
     },
     {
-        "id": 10,
-        "uuid": "647433204c07f",
-        "src": null,
-        "alt": "Id omnis aut dolorem",
-        "tittle": null,
-        "caption": "Ipsum natus blandit"
-    },
-    {
         "id": 11,
         "uuid": "647433626da62",
         "src": null,
@@ -121,26 +113,10 @@
     },
     {
         "id": 17,
-        "uuid": "64743cd01def2",
-        "src": null,
-        "alt": "Nisi facere vel sunt",
-        "tittle": "Quia rerum et eos p",
-        "caption": "Ut consequat Aliqui"
-    },
-    {
-        "id": 18,
-        "uuid": "64743cf73138e",
-        "src": null,
-        "alt": "Voluptas totam ab so",
-        "tittle": "Qui omnis aliquip do",
-        "caption": "Omnis dolorum exerci"
-    },
-    {
-        "id": 19,
-        "uuid": "647442904cb2d",
-        "src": null,
-        "alt": "Eum cillum voluptas ",
-        "tittle": "Sunt id quis veniam",
-        "caption": "Vitae aspernatur in "
+        "uuid": "64758fc75dcfb",
+        "src": "64758fc711f08_silder1.jpg",
+        "alt": "Exercitation veritat",
+        "tittle": "Quis reiciendis corr",
+        "caption": "Sapiente ut est con"
     }
 ]

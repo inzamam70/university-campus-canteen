@@ -36,6 +36,7 @@ class Slider{
 
     public function store($slider)
     {
+        
         // $result = false;
 
         // $sliderjson = file_get_contents(Config::datasource().'slider.json');
@@ -150,6 +151,7 @@ class Slider{
             foreach($this->slideritems as $aslide){
                 $ids[] = $aslide->id;
             }
+         
             sort($ids);
             $lastIndex = count($ids)-1;
             $highestId = $ids[$lastIndex];
@@ -173,6 +175,7 @@ class Slider{
         // $slider->alt = $alt;
 
         // return $slider;
+        // dd(is_null($slider->id));
         if(is_null($slider->id) || empty($slider->id)){
             $slider->id = $this->last_highest_id();
        }
@@ -197,7 +200,8 @@ class Slider{
         }
     }
 
-    public function find($id=null){
+    public function find($id = null){
+        
         if(is_null($id) || empty($id)){
             return false;
         }
@@ -205,6 +209,7 @@ class Slider{
         foreach($this->slideritems as $aslide){
             if($aslide->id == $id){
                 $slide = $aslide;
+               dd($aslide);
                 break;
             }
         }
