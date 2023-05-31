@@ -122,6 +122,7 @@ use \BITM\CUMPUS\Slider;
 															<button type="submit" onclick="return confirm ('are you Confirm?')" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></button>
 
 															<input type="hidden" name="id" value="<?= $slide->id ?>">
+															<input type="hidden" name="old_image" value="<?= $slide->src ?>">
 														</form>
 													</div>
 												</td>
