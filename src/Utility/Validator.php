@@ -12,7 +12,7 @@ class Validator{
 
     static public function empty($var){
 
-        return true;
+        return empty($var) ? true:false;
 
     }
 

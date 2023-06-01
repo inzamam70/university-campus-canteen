@@ -82,11 +82,13 @@ $manager = new ImageManager(['driver' => 'imagick']);
 $src = null;
 $filename = uniqid() . "_" . $_FILES['image']['name'];
 if (!empty($_FILES['image']['name'])) {
+   
     try {
         $img = $manager->make($_FILES['image']['tmp_name'])
             ->resize(300, 200)
             ->save($uploads . $filename);
         $src = $filename;
+       
     } catch (Intervention\Image\Exception\NotWritableException $e) {
 
         d($e);

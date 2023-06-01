@@ -31,7 +31,6 @@ if (!Validator::empty($id)) {
 $slider = new Slider();
 $aslide = $slider->find($id);
 
-//  dd (gettype($slide));
 
 ?>
 
