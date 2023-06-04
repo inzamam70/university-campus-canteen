@@ -7,11 +7,11 @@
 <?php include_once($partials . 'head.php') ?>
 
 <?php
-	use \BITM\CUMPUS\Productlist;
+	use \BITM\CUMPUS\Outdoor;
 	use \BITM\CUMPUS\Utility\Validator;
 	use \BITM\CUMPUS\Utility\Utility;
 
-	$pro = [
+	$out = [
 		'id' => null,
 		'uuid' => '',
 		'src' => '',
@@ -21,9 +21,9 @@
 	];
 	$id = Utility::sanitize($_GET['id']);
 	if (!Validator::empty($id)) {
-		$product = new Productlist();
+		$outdoor = new Outdoor();
 		//  $slideritems = $slider->index();
-		$pro = $product->show($id);
+		$out = $outdoor->show($id);
 	} else { // REfactor using Session based message
 		dd("Id cannot be null or empty");
 	}
@@ -65,15 +65,15 @@
 						<div class="col-sm-12 col-xl-12">
 							<div class="card">
 								<div class="card-img-actions mx-1 mt-1">
-									<img class="card-img img-fluid" src="<?= $webroot . 'uploads/' . $pro->src ?>" alt="<?= $pro->alt ?>" style="height:200px">
+									<img class="card-img img-fluid" src="<?= $webroot . 'uploads/' . $out->src ?>" alt="<?= $out->alt ?>" style="height:200px">
 
 								</div>
 
 								<div class="card-body">
 									<div class="d-flex align-items-start flex-nowrap">
 										<div>
-											<h6 class="font-weight-semibold mr-2"><?= $pro->tittle ?></h6>
-											<span><?= $pro->caption ?></span>
+											<h6 class="font-weight-semibold mr-2"><?= $out->tittle ?></h6>
+											<span><?= $out->caption ?></span>
 										</div>
 
 
@@ -82,7 +82,7 @@
 								</div>
 								<div class="d-flex flex-wrap justify-content-center p-3">
 
-									<a href="product_edit.php?id=<?= $pro->id ?>" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: blue;"><i class="icon-pencil"></i></a>
+									<a href="product_edit.php?id=<?= $out->id ?>" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: blue;"><i class="icon-pencil"></i></a>
 									<a href="productlist_delete.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></a>
 								</div>
 							</div>

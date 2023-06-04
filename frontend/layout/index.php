@@ -44,6 +44,24 @@
       </div>
   </section>
 
+  <section  class="productlist section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center pb-5">
+            <h1 style="color: red;"> Outdoor Places</h1>
+            <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Ipsum, sit officia? </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+      <?php include_once($partialfrontend . 'outdoorlist.php'); ?>
+      </div>
+  </section>
+
 
 
 

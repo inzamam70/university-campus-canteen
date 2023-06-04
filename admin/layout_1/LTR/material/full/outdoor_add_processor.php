@@ -1,6 +1,6 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 <?php
-use \BITM\CUMPUS\Productlist;
+use \BITM\CUMPUS\Outdoor;
 use \BITM\CUMPUS\Utility\Utility;
 use \Intervention\Image\ImageManager;
 
@@ -23,14 +23,14 @@ if (!empty($_FILES['image']['name'])) {
         d($e);
     }
 }
-$product = new Productlist();
+$outdoor = new Outdoor();
 
-$product->alt = Utility::sanitize($_POST['alt']);
-$product->tittle = Utility::sanitize($_POST['title']);
-$product->caption = Utility::sanitize($_POST['caption']);
-$product->src = $src;
+$outdoor->alt = Utility::sanitize($_POST['alt']);
+$outdoor->tittle = Utility::sanitize($_POST['title']);
+$outdoor->caption = Utility::sanitize($_POST['caption']);
+$outdoor->src = $src;
 
-$result = $product->store($product);
+$result = $outdoor->store($outdoor);
 
 if ($result) {
     redirect("product_index.php");

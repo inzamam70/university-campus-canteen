@@ -48,7 +48,7 @@
             },
             {
                 "name":"Product",
-                "url":"product.php"
+                "url":"product_index.php"
             }
         ]
     },
@@ -58,11 +58,11 @@
         "subnav":[
             {
                 "name":"Add Outdoor Place",
-                "url":"add_outdoor.php"
+                "url":"outdoor_add.php"
             },
             {
                 "name":"Outdoor Places",
-                "url":"outdoor.php"
+                "url":"outdoor_index.php"
             }
         ]
     },

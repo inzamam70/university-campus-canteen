@@ -1,7 +1,5 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php');
-$productjason = file_get_contents($frontenddatasource . "productlist.json");
-$productitems = json_decode($productjason);
 ?>
 
 <!DOCTYPE html>
@@ -66,11 +64,6 @@ $productitems = json_decode($productjason);
 									<div class="form-group">
 										<label>Alt</label>
 										<input name="alt" type="text" class="form-control" placeholder="Alter">
-									</div>
-
-                                    <div class="form-group">
-										<label>URL</label>
-										<input name="url" type="url" class="form-control" placeholder="Enter url">
 									</div>
 
                                     <div class="form-group">

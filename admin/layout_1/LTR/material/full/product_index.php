@@ -1,7 +1,19 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php');
-$productjason = file_get_contents($frontenddatasource . "productlist.json");
-$productitems = json_decode($productjason);
+// $productjason = file_get_contents($frontenddatasource . "productlist.json");
+// $productitems = json_decode($productjason);
+?>
+
+<?php
+
+
+
+use \BITM\CUMPUS\Productlist;
+
+ $product = new Productlist;
+ 
+ $productitems = $product->index();
+ 
 ?>
 
 <!DOCTYPE html>
@@ -64,14 +76,14 @@ $productitems = json_decode($productjason);
 
 							<div class="card-body">
 								<ul>
-									<li><a href="slider_index_grid.php">Grid View</a></li>
-									<li><a href="slider_index.php">List View</a></li>
+									<li><a href="product_index_grid.php">Grid View</a></li>
+									<li><a href="product_index.php">List View</a></li>
 								</ul>
 								<a href="add_product.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: blue;"><i class="icon-plus2"></i></a> 
-								<a href="slider_delete.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-trash"></i></a>  
+								<a href="productlist_delete.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-trash"></i></a>  
 								<a href="slider_download_xl.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-file-excel"></i></a>
-								<a href="slider_download_pdf.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-file-pdf"></i></a>  								
-								<a href="slider_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-printer2"></i></a>
+								<a href="product_pdf.php" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: red;"><i class="icon-file-pdf"></i></a>  								
+								<a href="product_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: green;"><i class="icon-printer2"></i></a>
 								<a href="slider_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: purple;"><i class="icon-IE"></i></a>  
 								<a href="slider_index_print.php" target="_blank" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple" style="color: blue;"><i class="icon-file-word"></i></a>  
 							</div>

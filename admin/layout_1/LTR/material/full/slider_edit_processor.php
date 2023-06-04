@@ -98,13 +98,13 @@ $src = $new_picture ?? $old_picture;
 $id = Utility::sanitize($_POST['id']);
 
 $slider = new Slider();
-$slide = $slider->find($id);
-$aslide->alt = Utility::sanitize($_POST['alt']);
-$aslide->title = Utility::sanitize($_POST['title']);
-$aslide->caption = Utility::sanitize($_POST['caption']);
-$aslide->src = $src;
+$sl = $slider->find($id);
+$sl->alt = Utility::sanitize($_POST['alt']);
+$sl->tittle = Utility::sanitize($_POST['title']);
+$sl->caption = Utility::sanitize($_POST['caption']);
+$sl->src = $src;
 
-$result = $slider->update($slide);
+$result = $slider->update($sl);
 
 if($result){
     $message = "Data is updated Successfully";

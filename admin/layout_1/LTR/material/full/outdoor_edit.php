@@ -1,14 +1,14 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 
 <?php
-use \BITM\CUMPUS\Productlist;
+use \BITM\CUMPUS\Outdoor;
 use \BITM\CUMPUS\Utility\Validator;
 use \BITM\CUMPUS\Utility\Utility;
 
 $id = Utility::sanitize($_GET['id']);
 if (!Validator::empty($id)) {
-	$product = new Productlist();
-	$pro = $product->edit($id);
+	$outdoor = new Outdoor();
+	$out = $outdoor->edit($id);
 }else{
 	dd("Id cannot be null or empty");
 }
@@ -65,27 +65,27 @@ if (!Validator::empty($id)) {
 
 			                <div class="card-body">
 			                	<form action="product_edit_processor.php" method="post" enctype="multipart/form-data">
-								<input name="id" type="text" class="form-control"  value="<?=$pro->id?>" />
-										<input name="uuid" type="text" class="form-control"  value="<?=$pro->uuid?>" />
+								<input name="id" type="text" class="form-control"  value="<?=$out->id?>" />
+										<input name="uuid" type="text" class="form-control"  value="<?=$out->uuid?>" />
 									<div class="form-group">
 										<label>Title</label>
-										<input name="title" type="text" class="form-control" placeholder="Enter Title" value="<?=$pro->tittle?>" >
+										<input name="title" type="text" class="form-control" placeholder="Enter Title" value="<?=$out->tittle?>" >
 									</div>
 
 									<d	iv class="form-group">
 										<label>Caption</label>
-										<input name="caption" type="text" class="form-control" placeholder="Enter Caption" value="<?=$pro->caption?>">
+										<input name="caption" type="text" class="form-control" placeholder="Enter Caption" value="<?=$out->caption?>">
 									</d>
 
 									<div class="form-group">
 										<label>Alt</label>
-										<input name="alt" type="text" class="form-control" placeholder="Alter" value="<?=$pro->alt?>">
+										<input name="alt" type="text" class="form-control" placeholder="Alter" value="<?=$out->alt?>">
 									</div>										
                                     <div class="form-group">
 										<label>Upload Picture</label>
 										<input type="file" name="picture" class="form-control" placeholder="Upload Picture">
-										<img src="<?=$webroot . 'uploads/' .$pro->src?>" style="height:100px" >
-										<input type="text" name="old_picture" class="form-control" value="<?=$pro->src?>">
+										<img src="<?=$webroot . 'uploads/' .$out->src?>" style="height:100px" >
+										<input type="text" name="old_picture" class="form-control" value="<?=$out->src?>">
 									</div>
 
 

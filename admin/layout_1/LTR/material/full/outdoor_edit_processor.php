@@ -1,7 +1,7 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 <?php
 
-use \BITM\CUMPUS\Productlist;
+use \BITM\CUMPUS\Outdoor;
 use \BITM\CUMPUS\Utility\Utility;
 
 $src = null;
@@ -26,18 +26,18 @@ if( array_key_exists('picture', $_FILES) && !empty($_FILES['picture']['name'])){
 }
 $src = $new_picture ?? $old_picture;
 $id = Utility::sanitize($_POST['id']);
-$product = new Productlist();
-$pro = $product->find($id);
-$pro->alt = Utility::sanitize($_POST['alt']);
-$pro->tittle = Utility::sanitize($_POST['title']);
-$pro->caption = Utility::sanitize($_POST['caption']);
-$pro->src = $src;
+$outdoor = new Outdoor();
+$out = $outdoor->find($id);
+$out->alt = Utility::sanitize($_POST['alt']);
+$out->tittle = Utility::sanitize($_POST['title']);
+$out->caption = Utility::sanitize($_POST['caption']);
+$out->src = $src;
 
-$result = $product->update($pro);
+$result = $product->update($out);
 if($result){
     $message = "Data is updated Successfully";
     set_session('message',$message);
     // redirect("slider_index.php?message=".$message);
-    redirect("product_index.php");
+    redirect("outdoor_index.php");
 }
 ?>

@@ -1,18 +1,5 @@
-<?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
-
 <?php
-use \BITM\CUMPUS\Productlist;
-use \BITM\CUMPUS\Utility\Validator;
-use \BITM\CUMPUS\Utility\Utility;
-
-$id = Utility::sanitize($_GET['id']);
-if (!Validator::empty($id)) {
-	$product = new Productlist();
-	$pro = $product->edit($id);
-}else{
-	dd("Id cannot be null or empty");
-}
- 
+include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php');
 ?>
 
 <!DOCTYPE html>
@@ -51,9 +38,8 @@ if (!Validator::empty($id)) {
 				<div class="row">
 					<div class="col-xl-12">
                     <div class="card">
-					
 							<div class="card-header header-elements-inline">
-				                <h6 class="card-title">Edit Slide Information</h6>
+				                <h6 class="card-title">Add Outdoor</h6>
 								<div class="header-elements">
 									<div class="list-icons">
 				                		<a class="list-icons-item" data-action="collapse"></a>
@@ -64,30 +50,26 @@ if (!Validator::empty($id)) {
 							</div>
 
 			                <div class="card-body">
-			                	<form action="product_edit_processor.php" method="post" enctype="multipart/form-data">
-								<input name="id" type="text" class="form-control"  value="<?=$pro->id?>" />
-										<input name="uuid" type="text" class="form-control"  value="<?=$pro->uuid?>" />
+			                	<form action="outdoor_add_processor.php" method="post" enctype="multipart/form-data">
 									<div class="form-group">
 										<label>Title</label>
-										<input name="title" type="text" class="form-control" placeholder="Enter Title" value="<?=$pro->tittle?>" >
+										<input name="title" type="text" class="form-control" placeholder="Enter Title" >
 									</div>
 
-									<d	iv class="form-group">
+									<div class="form-group">
 										<label>Caption</label>
-										<input name="caption" type="text" class="form-control" placeholder="Enter Caption" value="<?=$pro->caption?>">
-									</d>
+										<input name="caption" type="text" class="form-control" placeholder="Enter Caption">
+									</div>
 
 									<div class="form-group">
 										<label>Alt</label>
-										<input name="alt" type="text" class="form-control" placeholder="Alter" value="<?=$pro->alt?>">
-									</div>										
-                                    <div class="form-group">
-										<label>Upload Picture</label>
-										<input type="file" name="picture" class="form-control" placeholder="Upload Picture">
-										<img src="<?=$webroot . 'uploads/' .$pro->src?>" style="height:100px" >
-										<input type="text" name="old_picture" class="form-control" value="<?=$pro->src?>">
+										<input name="alt" type="text" class="form-control" placeholder="Alter">
 									</div>
 
+                                    <div class="form-group">
+										<label>Upload Picture</label>
+										<input type="file" name="image" class="form-control" placeholder="Upload Picture">
+									</div>
 
 									<div class="d-flex justify-content-start align-items-center">
 										<button type="submit" class="btn btn-light legitRipple">Cancel</button>

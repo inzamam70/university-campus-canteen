@@ -24,12 +24,14 @@ use \BITM\CUMPUS\Utility\Utility;
 $id = Utility::sanitize($_GET['id']);
 
 if (!Validator::empty($id)) {
-	d("Id cannot be null or empty");
-
+	$slider = new Slider();
+	$sl = $slider->edit($id);
+}else{
+	dd("Id cannot be null or empty");
 }
 
-$slider = new Slider();
-$aslide = $slider->find($id);
+// $slider = new Slider();
+// $aslide = $slider->find($id);
 
 
 ?>
@@ -84,21 +86,21 @@ $aslide = $slider->find($id);
 
 							<div class="card-body">
 								<form action="slider_edit_processor.php" method="post" enctype="multipart/form-data">
-									<input name="id" type="text" class="form-control" value="<?= $aslide->id ?>" />
-									<input name="uuid" type="text" class="form-control" value="<?= $aslide->uuid ?>" />
+									<input name="id" type="text" class="form-control" value="<?= $sl->id ?>" />
+									<input name="uuid" type="text" class="form-control" value="<?= $sl->uuid ?>" />
 									<div class="form-group">
 										<label>Title</label>
-										<input name="title" type="text" class="form-control" placeholder="Enter Title" value="<?= $aslide->tittle ?>">
+										<input name="title" type="text" class="form-control" placeholder="Enter Title" value="<?= $sl->tittle ?>">
 									</div>
 
 									<d iv class="form-group">
 										<label>Caption</label>
-										<input name="caption" type="text" class="form-control" placeholder="Enter Caption" value="<?= $aslide->caption ?>">
+										<input name="caption" type="text" class="form-control" placeholder="Enter Caption" value="<?= $sl->caption ?>">
 									</d>
 
 									<div class="form-group">
 										<label>Alt</label>
-										<input name="alt" type="text" class="form-control" placeholder="Alter" value="<?= $aslide->alt ?>">
+										<input name="alt" type="text" class="form-control" placeholder="Alter" value="<?= $sl->alt ?>">
 									</div>
 
 									
@@ -106,8 +108,8 @@ $aslide = $slider->find($id);
 									<div class="form-group">
 										<label>Upload Picture</label>
 										<input type="file" name="picture" class="form-control" placeholder="Upload Picture">
-										<img src="<?= $webroot . 'uploads/' . $aslide->src ?>" style="height:100px">
-										<input type="text" name="old_picture" class="form-control" value="<?= $aslide->src ?>">
+										<img src="<?= $webroot . 'uploads/' . $sl->src ?>" style="height:100px">
+										<input type="text" name="old_picture" class="form-control" value="<?= $sl->src ?>">
 									</div>
 
 
