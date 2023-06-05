@@ -18,8 +18,8 @@ foreach ($productlists as $key => $productitem) :
           <img src="<?= $webroot . 'uploads/' . $productitem->src  ?>" alt="" width="100%" height="100%">
         </div>
         <h3 class="card-title"><?= $productitem->tittle ?></h3>
-        <p class="lead text-danger"><?= $productitem->caption ?></p>
-        <a href="productdetails.php" class="btn bg-warning text-dark">See More</a>
+        <p class="lead text-danger"><?=$productitem->caption ?></p>
+        <a href="productdetails.php?id=<?=$productitem->id?>" class="btn bg-warning text-dark">See More</a>
       </div>
     </div>
   </div>

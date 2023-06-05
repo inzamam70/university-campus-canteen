@@ -1,11 +1,11 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 'config.php') ?>
 
 <?php
-	use \BITM\CUMPUS\Productlist;
+	use \BITM\CUMPUS\Outdoor;
 	use \BITM\CUMPUS\Utility\Validator;
 	use \BITM\CUMPUS\Utility\Utility;
 
-	$pro = [
+	$out = [
 		'id' => null,
 		'uuid' => '',
 		'src' => '',
@@ -15,9 +15,9 @@
 	];
 	$id = Utility::sanitize($_GET['id']);
 	if (!Validator::empty($id)) {
-		$product = new Productlist();
+		$outdoor = new Outdoor();
 		//  $slideritems = $slider->index();
-		$pro = $product->show($id);
+		$out = $outdoor->show($id);
     
 	} else { // REfactor using Session based message
 		dd("Id cannot be null or empty");
@@ -79,20 +79,14 @@
   <div class="container ">
         <div class="row mt-5">
             <div class="col-md-5 ps-lg-5 mt-3 ">
-                <img src="<?= $webroot . 'uploads/' . $pro->src ?>" alt="<?=$pro->alt?>">
+                <img src="<?= $webroot . 'uploads/' . $out->src ?>" alt="<?=$out->alt?>">
             </div>
             <div class="col-md-7">
                 <p class="new text-center">NEW</p>
-                <h2><?=$pro->tittle?></h2>
-                <p>Product Code: CC1</p>
-                <p class="price"><?=$pro->caption?></p>
-                <p><b>Availability:</b> In Stock</p>
-                <p><b>Condition:</b> New</p>
-                <label for="">
-                    Quantity:
-                </label>
-                <input type="text" value="1">
-                <a href="cart.php" class="btn bg-warning text-dark ">Add to cart</a>
+                <h2><?=$out->tittle?></h2>
+                <p class="price"><?=$out->caption?></p>
+                <p><b>Availability:</b>In Free</p>
+                <p><b>Condition:</b>Good</p>
             </div>
         </div>
       </div>

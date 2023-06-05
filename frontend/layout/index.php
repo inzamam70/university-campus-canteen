@@ -49,7 +49,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-header text-center pb-5">
-            <h1 style="color: red;"> Outdoor Places</h1>
+            <h1 style="color: red;">Trending Outdoor Places</h1>
             <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Ipsum, sit officia? </p>
 
 

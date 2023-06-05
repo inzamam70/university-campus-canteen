@@ -33,7 +33,7 @@ $outdoor->src = $src;
 $result = $outdoor->store($outdoor);
 
 if ($result) {
-    redirect("product_index.php");
+    redirect("outdoor_index.php");
 } else {
     echo "Data is not stored";
 }
