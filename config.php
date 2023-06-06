@@ -66,3 +66,4 @@ $FRONTEND_URL = "http://Campus-Canteen.test";
 
 
 $uploads = $docroot.'/uploads'. DIRECTORY_SEPARATOR;
+$datasource_driver = "JSON";

@@ -33,20 +33,21 @@
 	use \BITM\CUMPUS\Utility\Validator;
 	use \BITM\CUMPUS\Utility\Utility;
 
-	$sl = [
-		'id' => null,
-		'uuid' => '',
-		'src' => '',
-		'alt' => '',
-		'tittle' => '',
-		'caption' => ''
-	];
+	// $sl = [
+	// 	'id' => null,
+	// 	'uuid' => '',
+	// 	'src' => '',
+	// 	'alt' => '',
+	// 	'tittle' => '',
+	// 	'caption' => ''
+	// ];
 
 	$id = Utility::sanitize($_GET['id']);
+
 	if (!Validator::empty($id)) {
 		$sli = new Slider();
 		//  $slideritems = $slider->index();
-		$sl = $sli->show($id);
+		$sl = $sli->show2($id);
 	} else { // REfactor using Session based message
 		dd("Id cannot be null or empty");
 	}

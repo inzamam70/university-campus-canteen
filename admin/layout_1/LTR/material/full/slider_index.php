@@ -10,7 +10,7 @@ use \BITM\CUMPUS\Slider;
 
  $slider = new Slider;
  
- $slideritems = $slider->index();
+ $slideritems = $slider->index2();
  
 ?>
 
