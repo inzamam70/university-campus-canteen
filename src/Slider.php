@@ -57,11 +57,11 @@ class Slider
     }
     public function store2($slider){
              // prepare the sql; INSERT
-             $stmt = $this->conn->prepare('INSERT INTO `sliders`  (`uuid`, `tittle`, `path`, `alt`, `caption`, `created_at`, `updated_at`, `created_by`, `updated_by`) 
+             $stmt = $this->conn->prepare('INSERT INTO `sliders`  (`uuid`, `title`, `path`, `alt`, `caption`, `created_at`, `updated_at`, `created_by`, `updated_by`) 
              VALUES (:uuid, :title, :path, :alt, :caption, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, :created_by, :updated_by)');
              
              $stmt->bindParam(':uuid', $slider->uuid, \PDO::PARAM_STR);
-             $stmt->bindParam(':tittle',$slider->tittle, \PDO::PARAM_STR);
+             $stmt->bindParam(':title',$slider->tittle, \PDO::PARAM_STR);
              $stmt->bindParam(':path', $slider->src, \PDO::PARAM_STR);
              $stmt->bindParam(':alt', $slider->alt, \PDO::PARAM_STR);
              $stmt->bindParam(':caption', $slider->caption, \PDO::PARAM_STR);
@@ -127,6 +127,19 @@ class Slider
         unset($this->slideritems[$key]);
         $this->slideritems = array_values($this->slideritems);
         return $this->insert();
+    }
+
+    public function destroy2($id){
+        
+        $stmt = $this->conn->prepare('DELETE FROM sliders WHERE id = :id');
+        
+        $stmt->bindParam(':id', $id, \PDO::PARAM_INT);
+        
+        $result = $stmt->execute();
+        return $result;
+   
+        // $stmt->setFetchMode(\PDO::FETCH_CLASS, "\BITM\CUMPUS\Slider");
+        //  return $slider = $stmt->fetch();
     }
     public function inactivate($uuid = null){ //completely removed
         if(empty($uuid)) {

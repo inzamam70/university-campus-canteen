@@ -108,8 +108,8 @@ use \BITM\CUMPUS\Slider;
 
 											<tr>
 												<td title="<?= $slide->uuid ?>"><?= ++$key ?></td>
-												<td><?= $slide->tittle ?></td>
-												<td><img src="<?= filter_var($slide->src, FILTER_VALIDATE_URL) ? $slide->src : $webroot . 'uploads/' . $slide->src ?>" style="width:60px;height:60px"></td>
+												<td><?= $slide->title ?></td>
+												<td><img src="<?= filter_var($slide->path, FILTER_VALIDATE_URL) ? $slide->path : $webroot . 'uploads/' . $slide->path ?>" style="width:60px;height:60px"></td>
 												<td><?= $slide->alt ?></td>
 												<td><?= $slide->caption ?></td>
 												<td>
@@ -122,7 +122,7 @@ use \BITM\CUMPUS\Slider;
 															<button type="submit" onclick="return confirm ('are you Confirm?')" class="btn btn-outline bg-grey border-grey text-grey-600 btn-icon rounded-round border-2 legitRipple mx-1" style="color: red;"><i class="icon-trash"></i></button>
 
 															<input type="hidden" name="id" value="<?= $slide->id ?>">
-															<input type="hidden" name="old_image" value="<?= $slide->src ?>">
+															<input type="hidden" name="old_image" value="<?= $slide->path ?>">
 														</form>
 													</div>
 												</td>

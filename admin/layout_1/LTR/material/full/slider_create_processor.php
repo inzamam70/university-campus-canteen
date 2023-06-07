@@ -32,7 +32,7 @@ $slider->alt = Utility::sanitize($_POST['alt']);
 $slider->tittle = Utility::sanitize($_POST['title']);
 $slider->caption = Utility::sanitize($_POST['caption']);
 
-// $slider->created_by = "created-sdf";
+//$slider->created_by = "created-sdf";
 // $slider->updated_by = "created-sdf";
 
 $slider->src = $src;

@@ -84,7 +84,7 @@
 						<div class="col-sm-12 col-xl-12">
 							<div class="card">
 								<div class="card-img-actions mx-1 mt-1">
-									<img class="card-img img-fluid" src="<?= $webroot . 'uploads/' . $sl->src ?>" alt="<?= $sl->alt ?>" style="height:200px">
+									<img class="card-img img-fluid" src="<?= $webroot . 'uploads/' . $sl->path ?>" alt="<?= $sl->alt ?>" style="height:200px">
 
 								</div>
 
